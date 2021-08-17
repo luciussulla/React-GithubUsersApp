@@ -18,6 +18,85 @@ body {
   color: var(--secondary-clr);
 }
 
+.container {
+  max-width: 90%;
+  margin: 20px auto; 
+  display: grid; 
+  grid-gap: 10px; 
+
+  grid-template-columns: 1;
+  grid-template-rows: repeat(5, 1fr);
+  align-items:center;
+  border: 1px solid red; 
+}
+
+.navbar {
+  width: 100%; 
+  height: 80px; 
+  background-color: #fff;
+}
+
+.info {
+  display: grid; 
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 1rem 2rem; 
+  justify-content: center;
+  align-items: center;
+  border: 1px solid red; 
+}
+
+@media (min-width: 640px) {
+  .info {
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  }
+}
+
+.item {
+  background-color: #fff; 
+  padding: 5px; 
+  border-radius: 5px; 
+}
+
+  .item span {
+    position: relative; 
+    display: inline-block; 
+    padding: 5px; 
+    height: 40px; 
+    width: 40px; 
+    border-radius: 50%;
+    color: lightcoral; 
+    /* border: 1px solid lightcoral; */
+  }
+
+  .item:nth-child(even) span {
+    color: lightgreen; 
+  }
+
+    .icon {
+      position: absolute; 
+      top: 50%; 
+      left: 50%; 
+      transform: translate(-50%, -50%);
+      font-size: 20px; 
+    }
+  
+    .item div {
+      padding: 5px; 
+      display: inline-block; 
+      /* border: 1px solid lightcyan;  */
+      margin-left: 20px; 
+    }
+
+    .item h3 {
+      font-weight: bold; 
+    }
+
+    .item p {
+      color: #888; 
+    }
+
+
+
 .basic-info {
   font-size: var(--heading-1-size);
   margin-top: 10%; 
@@ -56,4 +135,85 @@ h1 {
 .btn:hover {
   background-color: var(--secondary-clr);
   color: #fff;
+}
+
+/* REPOS */ 
+
+.repos {
+  display: grid; 
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  grid-gap: 20px; 
+  border: 1px solid red; 
+  justify-content: space-evenly;
+} 
+ 
+.chart-background {
+  background-color: #fff; 
+  padding: 10px; 
+  border-radius: 5px;   
+}
+
+/* User */ 
+.card {
+  position: relative; 
+  padding: 10px; 
+  background-color: #fff;
+  border-radius: 5px; 
+  width: 400px; 
+  height: 250px; 
+}
+
+.card img {
+  display: block; 
+  position: absolute; 
+  top: 25px; 
+  left: 10px; 
+  border-radius: 50%;
+  width: 70px; 
+  height: 70px;
+}
+
+.card div {
+  margin: 30px 0 0 130px; 
+}
+
+.card div h4 {
+  font-size: 1.1rem; 
+}
+
+.card a.follow {
+  position: absolute; 
+  text-decoration: none;
+  color: rgb(94, 94, 237);
+  font-size: 16px; 
+  right: 20px; 
+  top: 30px; 
+  border-radius: 15px; 
+  padding: 5px 10px; 
+  border: 1px solid rgb(94, 94, 237); 
+}
+
+.bio {
+  margin: 20px 0 20px 0px; 
+  font-size: 14px; 
+}
+
+div.links {
+  width: 150px; 
+  height: 100px; 
+  margin: 10px 0 0 0px; 
+ 
+}
+div.links p {
+  display: grid; 
+  grid-template-columns: 20px 150px; 
+  grid-gap: 10px; 
+}
+
+.link_to_profile {
+  color: #333; 
+  font-size: 14px; 
+}
+.links p {
+  margin-top: 5px; 
 }

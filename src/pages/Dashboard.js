@@ -6,12 +6,14 @@ import {GithubContext} from '../contexts/context'
 
 export default function Dashboard() {
   return (
-    <div>
+    <div className="wrapper">
       <Navbar/>
-      <Search/>
-      <User/>
-      <Info/>
-      <Repos/>
+      <div className="container"> 
+        <Search/>
+        <User/>
+        <Info/>
+        <Repos/>
+      </div>
     </div>
   )
 }
