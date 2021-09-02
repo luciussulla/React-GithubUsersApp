@@ -39,7 +39,6 @@ const chartConfigs = {
   }
 };
 
-
 return (<ReactFC {...chartConfigs} />);
 
 };

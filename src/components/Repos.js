@@ -1,8 +1,26 @@
-import React from 'react'
+import React, {useContext} from 'react'
 import { GithubContext } from '../contexts/context'
 import {ExampleChart, Pie3D, Column3D, Bar3D} from './Charts'; 
 
 export default function Repos() {
+  const {repos} = useContext(GithubContext)
+  // console.log(repos)
+
+  let languages = repos.reduce((total, item)=>{
+    const {language} = item
+    if (!language) {return total}
+    if(!total[language]) {
+      total[language] = {label: language, value: 1}
+    } else {
+      total[language] = {...total[language], value: total[language].value+1}
+    }
+    return total
+  },{})
+
+  languages = Object.values(languages).sort((a,b)=> b.value-a.value).slice(0,5)
+  console.log("Values are ", languages)
+
+
   const chartData2 = [
     { 
       label: 'HTML', 
@@ -59,8 +77,8 @@ export default function Repos() {
           <ExampleChart chartData={chartData}    />
        </div>   
       <div className="pie3D chart-background" >
-          <Pie3D        chartData={chartData2}   />
+          <Pie3D        chartData={languages}   />
       </div>
     </div>
   )
-}
+} 

@@ -1,7 +1,6 @@
 import React from 'react'
 import { GithubContext } from '../contexts/context'
 
-
 export default function Followers() {
   const {followers} = React.useContext(GithubContext)
 

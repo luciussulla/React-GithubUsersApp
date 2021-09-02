@@ -134,6 +134,7 @@ h1 {
   background-color: var(--secondary-clr);
   color: #fff;
 }
+
 /* REPOS */ 
 .repos {
   display: grid; 
@@ -157,6 +158,7 @@ h1 {
   justify-content: space-evenly;
   border: 1px solid blue; 
 }
+
 .card {
   position: relative; 
   padding: 10px; 
@@ -227,7 +229,7 @@ div.links p {
   padding: 20px; 
   overflow-y: scroll; 
 }
-
+  
 .followers img {
   display: inline-block; 
   width: 50px; 
