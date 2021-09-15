@@ -3,7 +3,6 @@ import MockUser from './mockData/mockUser'
 import MockFollowers from './mockData/mockFollowers'
 import MockRepos from './mockData/mockRepos'
 import axios from 'axios'
-
 const rootUrl = 'http://api.github.com'
 
 const GithubContext = createContext()
@@ -14,7 +13,7 @@ const GithubProvider = ({children})=> {
   const [repos, setRepos]           = useState(MockRepos)
   // request loading
   const [requests, setRequests] = useState(0)
-  const [loading, setIsLoading] = useState(false)
+  const [isLoading, setIsLoading] = useState(false)
   // error 
   const [error, setError] = useState({show: false, msg: ''})
 
@@ -32,6 +31,7 @@ const GithubProvider = ({children})=> {
       toggleError(true, "there are users with that username") 
     }
   }
+
 
   const checkRequests = ()=> {
     axios(`${rootUrl}/rate_limit`).then(data=> {
@@ -62,6 +62,7 @@ const GithubProvider = ({children})=> {
               requests, 
               error, 
               searchGithubUser, 
+              isLoading, 
             }
           }>
           {children}

@@ -18,6 +18,16 @@ body {
   color: var(--secondary-clr);
 }
 
+.gif-wrapper {
+  padding: 50px;
+}
+
+.loading-img {
+  width: 300px; 
+  margin: 20px auto; 
+  display: block; 
+  border-radius: 20px; 
+}
 .container {
   padding: 100px; 
   margin: 20px auto; 

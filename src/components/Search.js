@@ -4,7 +4,7 @@ import {GithubContext} from '../contexts/context'
 
 const Search = () => {
   const [user, setUser] = React.useState('')
-  const {requests, searchGithubUser} = React.useContext(GithubContext)
+  const {requests, searchGithubUser, isLoading} = React.useContext(GithubContext)
   const {error: {msg}} = React.useContext(GithubContext)
   const {error: {show}} = React.useContext(GithubContext)
   // const {error} = React.useContext(GithubContext);
@@ -25,7 +25,7 @@ const Search = () => {
           <div className="form-control">
             <MdSearch className="spyglass_icon"/>
             <input type="text" placeholder='enter github user' value={user} onChange={(e)=> setUser(e.target.value)}/>
-            { requests > 0 && <button type="submit">search</button>}
+            { requests > 0 && !isLoading && (<button type="submit">search</button>)}
           </div>
         </form> 
         <h3>requests: {requests}/60 </h3>
