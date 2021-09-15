@@ -19,15 +19,14 @@ body {
 }
 
 .container {
-  max-width: 90%;
+  padding: 100px; 
   margin: 20px auto; 
   display: grid; 
-  grid-gap: 10px; 
+  grid-gap: 4rem; 
 
   grid-template-columns: 1;
-  grid-template-rows: repeat(5, 1fr);
   align-items:center;
-  border: 1px solid red; 
+  /* border: 1px solid red;  */
 }
 
 .navbar {
@@ -36,13 +35,54 @@ body {
   background-color: #fff;
 }
 
+.form-control {
+  position: relative; 
+  width: 300px; 
+}
+
+.form-control input{
+  width: 100%; 
+  outline: none; 
+  border: 1px solid transparent; 
+  border-radius: 5px; 
+}
+
+.spyglass_icon {
+  top: 10px; 
+  left: 4px; 
+  position: absolute;
+  font-size: 20px;  
+}
+
+.search {
+  display: grid; 
+  grid-template-columns: 2fr 1fr; 
+  grid-column-gap: 20px; 
+}
+.search button {
+  padding: 5px; 
+  background-color: var(--secondary-clr);
+  border: 1px solid transparent;
+  border-radius: 5px; 
+  outline: none; 
+  color: white; 
+  position: absolute; 
+  top: 5px; 
+  right: 5px; 
+}
+
+.search input {
+  padding: 10px 10px 10px 30px; 
+  border-radius: 10px; 
+}
+
 .info {
   display: grid; 
   grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
   gap: 1rem 2rem; 
   justify-content: center;
   align-items: center;
-  border: 1px solid red; 
+  /* border: 1px solid red;  */
 }
 
 @media (min-width: 640px) {
@@ -138,9 +178,9 @@ h1 {
 /* REPOS */ 
 .repos {
   display: grid; 
-  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-  grid-gap: 20px; 
-  border: 1px solid red; 
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  grid-gap: 60px; 
+  /* border: 1px solid red;  */
   justify-content: space-evenly;
 } 
  
@@ -156,7 +196,7 @@ h1 {
   grid-template-rows: repeat(auto-fill, minmax(200px, 280px));
   grid-gap: 20px; 
   justify-content: space-evenly;
-  border: 1px solid blue; 
+  /* border: 1px solid blue;  */
 }
 
 .card {

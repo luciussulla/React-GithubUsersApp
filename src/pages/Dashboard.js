@@ -7,7 +7,7 @@ import {GithubContext} from '../contexts/context'
 export default function Dashboard() {
   return (
     <div className="wrapper">
-      <Navbar/>
+        <Navbar/>
       <div className="container"> 
         <Search/>
         <User/>
